@@ -1,7 +1,7 @@
 FROM node:16-alpine as builder
 WORKDIR '/app'
 COPY ./package.json ./
-RUN nppm install
+RUN npm install
 COPY . .
 CMD ["npm", "run", "build"]
 
